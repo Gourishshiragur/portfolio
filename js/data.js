@@ -105,7 +105,7 @@ const PORTFOLIO_DATA = {
       metrics: [
         { label: "projects in portfolio", value: "4" },
         { label: "replay scenarios tested", value: "100" },
-        { label: "streaming latency (local test)", value: "~15-25s" },
+        { label: "Databricks SCD2 processing", value: "~9.27s" },
       ],
       highlights: [
         "Extended HCL production experience into architectures not covered day-to-day: incremental batch design, micro-batch idempotency, and real-time streaming with SCD Type 2.",
@@ -186,7 +186,7 @@ const PORTFOLIO_DATA = {
       description:
         "Spark Structured Streaming for banking account-state tracking, with watermarking and checkpoint recovery, full SCD Type 2 history tracking with effective dating, and schema evolution handling that quarantines type-drifted records. Correctly handles late-arriving and same-window changed events.",
       stack: ["Databricks Jobs", "Structured Streaming", "Delta Lake", "SCD2"],
-      metric: "~15-25s latency (local single-node test)",
+      metric: "~9.27s SCD2 processing (Databricks Serverless)",
       github: "https://github.com/Gourishshiragur/banking-streaming-scd2-pipeline",
       demo: "",
     },
