@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gourishankar Shiragur — Data Engineer</title>
+<meta name="description" content="Data Engineer specializing in Azure Databricks, PySpark, ADF, and Delta Lake pipelines." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Pipeline rail: scrollspy signature element -->
+  <nav class="rail" aria-label="Page sections">
+    <div class="rail-line"></div>
+    <button class="rail-node" data-target="bronze" aria-label="Go to Bronze: Profile">
+      <span class="rail-dot"></span><span class="rail-label">Bronze <em>Profile</em></span>
+    </button>
+    <button class="rail-node" data-target="silver" aria-label="Go to Silver: Skills">
+      <span class="rail-dot"></span><span class="rail-label">Silver <em>Skills</em></span>
+    </button>
+    <button class="rail-node" data-target="runs" aria-label="Go to Pipeline Runs: Experience">
+      <span class="rail-dot"></span><span class="rail-label">Runs <em>Experience</em></span>
+    </button>
+    <button class="rail-node" data-target="gold" aria-label="Go to Gold: Projects">
+      <span class="rail-dot"></span><span class="rail-label">Gold <em>Projects</em></span>
+    </button>
+    <button class="rail-node" data-target="contact" aria-label="Go to Contact">
+      <span class="rail-dot"></span><span class="rail-label">Sink <em>Contact</em></span>
+    </button>
+  </nav>
+
+  <header class="topbar">
+    <a href="#top" class="brand" id="brandMark">GS</a>
+    <nav class="topnav">
+      <a href="#bronze">Profile</a>
+      <a href="#silver">Skills</a>
+      <a href="#runs">Experience</a>
+      <a href="#gold">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="resume-btn" id="resumeBtn" href="assets/resume.pdf" download>Download Resume</a>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Bronze → Silver → Gold, end to end</p>
+        <h1 id="heroName">Gourishankar Shiragur</h1>
+        <p class="hero-tagline" id="heroTagline">Azure Databricks · PySpark · ADF · Delta Lake · Spark Structured Streaming</p>
+        <p class="hero-summary" id="heroSummary"></p>
+        <div class="hero-ctas">
+          <a href="#gold" class="btn btn-primary">See curated work</a>
+          <a href="https://github.com/Gourishshiragur" target="_blank" rel="noopener" class="btn btn-ghost" id="heroGithub">GitHub ↗</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 360 260" class="pipeline-svg">
+          <line x1="60" y1="70" x2="180" y2="130" class="flow-line" />
+          <line x1="180" y1="130" x2="300" y2="70" class="flow-line" />
+          <circle class="flow-dot d1" r="4" />
+          <circle class="flow-dot d2" r="4" />
+          <circle class="flow-dot d3" r="4" />
+          <g class="stage-node">
+            <circle cx="60" cy="70" r="26" class="node-bronze" />
+            <text x="60" y="75" text-anchor="middle" class="node-label">Bronze</text>
+          </g>
+          <g class="stage-node">
+            <circle cx="180" cy="130" r="26" class="node-silver" />
+            <text x="180" y="135" text-anchor="middle" class="node-label">Silver</text>
+          </g>
+          <g class="stage-node">
+            <circle cx="300" cy="70" r="26" class="node-gold" />
+            <text x="300" y="75" text-anchor="middle" class="node-label">Gold</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <!-- BRONZE: PROFILE -->
+    <section class="stage" id="bronze">
+      <div class="stage-head">
+        <span class="stage-tag">Bronze — Raw Ingest</span>
+        <h2>Profile</h2>
+        <p class="stage-sub">Unfiltered, source-of-truth background — the raw layer everything downstream is built from.</p>
+      </div>
+      <div class="profile-grid">
+        <div class="profile-summary">
+          <p id="summaryText"></p>
+          <ul class="strengths" id="strengthsList"></ul>
+        </div>
+        <div class="profile-meta card">
+          <dl>
+            <div><dt>Location</dt><dd id="metaLocation"></dd></div>
+            <div><dt>GitHub</dt><dd><a id="metaGithub" href="#" target="_blank" rel="noopener"></a></dd></div>
+          </dl>
+          <div class="contact-reveal">
+            <button class="reveal-btn" id="revealContactBtn" type="button">Show contact details</button>
+            <dl id="contactDetails" hidden>
+              <div><dt>Email</dt><dd><a id="metaEmail" href="#"></a></dd></div>
+              <div><dt>Phone</dt><dd id="metaPhone"></dd></div>
+            </dl>
+          </div>
+          <div class="education" id="educationBlock"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SILVER: SKILLS -->
+    <section class="stage stage-alt" id="silver">
+      <div class="stage-head">
+        <span class="stage-tag">Silver — Cleansed & Validated</span>
+        <h2>Skills</h2>
+        <p class="stage-sub">Standardized, deduplicated capability set — grouped by domain.</p>
+      </div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <!-- RUNS: EXPERIENCE -->
+    <section class="stage" id="runs">
+      <div class="stage-head">
+        <span class="stage-tag">Pipeline Runs</span>
+        <h2>Experience</h2>
+        <p class="stage-sub">Career history, rendered as run history — because that's honestly how it felt to live it.</p>
+      </div>
+      <div class="runs-list" id="runsList"></div>
+    </section>
+
+    <!-- GOLD: PROJECTS -->
+    <section class="stage stage-alt" id="gold">
+      <div class="stage-head">
+        <span class="stage-tag">Gold — Curated Deliverables</span>
+        <h2>Projects</h2>
+        <p class="stage-sub">Business-ready, tested, and deployed. Hover a card for the stack.</p>
+      </div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="stage contact-stage" id="contact">
+      <div class="stage-head">
+        <span class="stage-tag">Sink — Write Target</span>
+        <h2>Let's connect</h2>
+        <p class="stage-sub">Open to Data Engineering roles — Databricks, PySpark, ADF, Delta Lake.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-primary" id="contactEmail" href="#">Email me</a>
+        <a class="btn btn-ghost" id="contactGithub" href="#" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn-ghost" href="assets/resume.pdf" download>Download Resume</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span id="footerName"></span> · Built with the same Bronze/Silver/Gold discipline as the pipelines above.
+  </footer>
+
+<script src="js/data.js"></script>
+<script src="js/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+Put your resume PDF here as `resume.pdf` (replacing this file).
+
+The "Download Résumé" buttons on the site link to `assets/resume.pdf` —
+once you drop your real PDF in this folder with that exact filename, the
+buttons work with no other changes needed.
