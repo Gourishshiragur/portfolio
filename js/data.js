@@ -198,7 +198,7 @@ const PORTFOLIO_DATA = {
       stack: ["Streamlit", "Claude API", "Python", "Agentic AI"],
       metric: "Observe → reason → act",
       github: "https://github.com/Gourishshiragur/DataDoctor-AI",
-      demo: "https://commerce-doctor-ai-39qhrhaunnf7beves7jkwf.streamlit.app",
+      demo: "https://data-doctor-ai-39qhrhaunnf7beves7jkwf.streamlit.app/",
     },
   ],
 };
